@@ -97,6 +97,6 @@ app.post("/webhook", (req,res)=> {
 });
 
 app.get('',(req,res)=>{
-    res.sendFile('${publicPath}/wts.js')
-    res.status(200).send("hello this webhook setup");
+    res.sendFile('${publicPath}/')
+    //res.status(200).send("hello this webhook setup");
 });
