@@ -1,4 +1,3 @@
-what i have to add or change in this nodejs code that i host him in  RunCloud server (the public URL is"http://chat.birdcampaign.com/"):
 const express = require("express");
 const bodyParser = require("body-parser");
 const axios = require("axios");
