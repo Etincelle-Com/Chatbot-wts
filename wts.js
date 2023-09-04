@@ -1,3 +1,4 @@
+what i have to add or change in this nodejs code that i host him in  RunCloud server (the public URL is"http://chat.birdcampaign.com/"):
 const express = require("express");
 const bodyParser = require("body-parser");
 const axios = require("axios");
@@ -39,7 +40,7 @@ app.post("/webhook", (req,res)=> {
                 let msg_body = body.entry[0].changes[0].value.messages[0].text.body;
                 axios({
                     method:"POST",
-                    url:"https://graph.facebook.com/v17.0/"+phon_no_id+"/messages?access_token"+token,
+                    url:"https://graph.facebook.com/v17.0/"+phon_no_id+"/messages?access_token="+token,
                     data:{
                         messaging_product: "whatsapp",
                         to: from,
@@ -97,6 +98,6 @@ app.post("/webhook", (req,res)=> {
 });
 
 app.get("/",(req,res)=>{
-    //res.sendFile('${publicPath}/')
+    //res.sendFile('${publicPath}/wts.js')
     res.status(200).send("hello this webhook setup");
 });
