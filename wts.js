@@ -96,7 +96,7 @@ app.post("/webhook", (req,res)=> {
             }
 });
 
-app.get('',(req,res)=>{
+app.get("/",(req,res)=>{
     //res.sendFile('${publicPath}/')
     res.status(200).send("hello this webhook setup");
 });
